@@ -1,2 +1,2 @@
-# Tutoration
+# HomiEution
 E-Tutoring Platform
