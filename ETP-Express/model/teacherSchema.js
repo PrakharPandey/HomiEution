@@ -5,7 +5,7 @@ let Schema = mongoose.Schema
 let teacher = new Schema({
 id: String,
 name: String,
-age: Number,
+age: String,
 subjects: Array,
 experience: String,
 rating: String,
@@ -15,4 +15,4 @@ achievements: String,
 expDescription: String
 })
 
-module.exports = mongoose.model('Teacher', teacher)
+module.exports = mongoose.model('teacher', teacher)

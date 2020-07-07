@@ -3,9 +3,8 @@ let router = express.Router()
 var mongoose = require ('mongoose')
 var bodyParser = require ('body-parser')
 
-
-let db = 'mongodb://localhost/weather'
-mongoose.connect(db)
+const mongoURI = 'mongodb+srv://prakhar:passiton@cluster0.sjrlm.azure.mongodb.net/etp?retryWrites=true&w=majority';
+mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
 
 var teacher = require ('../model/teacherSchema')
 
@@ -25,7 +24,6 @@ router.get('/find', (req, res) => {
       res.send("error has occured while finding")
     else
     {
-  
       res.json(emp)
     }
   });
@@ -46,20 +44,14 @@ router.get('/findByPostalCode/:postalCode', (req, res) => {
 router.post('/addTeacher', (req, res) => {
 	let teacherObj = new teacher()
        
-teacherObj.name = req.body.name,
-teacherObj.country = req.body.country,
-teacherObj.date = req.body.date,
-teacherObj.max = req.body.max,
-teacherObj.min = req.body.min,
-teacherObj.condition = req.body.condition,
-teacherObj.img = req.body.img,
+teacherObj.name = 'Prakhar',
 
 	teacherObj.save((err, we) => {
 		if(err)
 			res.send('error saving weather')
 		else
 		{
-			res.json(we)
+			res.json(teacherObj)
 		}
 	})
 })
