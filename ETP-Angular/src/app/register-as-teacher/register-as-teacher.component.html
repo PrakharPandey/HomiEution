@@ -14,37 +14,37 @@
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">First Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
+                        <input type="text" id="firstName" placeholder="First Name" class="form-control" [(ngModel)]="data.name" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="lastName" class="col-sm-3 control-label">Last Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus>
+                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" [(ngModel)]="data.lastName" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="col-sm-3 control-label">Email* </label>
                     <div class="col-sm-9">
-                        <input type="email" id="email" placeholder="Email" class="form-control" name= "email">
+                        <input type="email" id="email" placeholder="Email" class="form-control" name="email" [(ngModel)]="data.email">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
                     <div class="col-sm-9">
-                        <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control">
+                        <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control" [(ngModel)]="data.phoneNumber">
                     </div>
                 </div>
                 <div class="form-group">
                         <label for="Address" class="col-sm-3 control-label">Address </label>
                     <div class="col-sm-9">
-                        <input type="address" id="address" placeholder="Enter Address" class="form-control">
+                        <input type="address" id="address" placeholder="Enter Address" class="form-control" [(ngModel)]="data.address">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="Address" class="col-sm-3 control-label">Postal Code</label>
                 <div class="col-sm-9">
-                    <input type="number" id="postalcode" placeholder="Enter postal code" class="form-control">
+                    <input type="number" id="postalcode" placeholder="Enter postal code" class="form-control" [(ngModel)]="data.postalCode">
                 </div>
             </div>
                 <div class="form-group">
@@ -65,6 +65,6 @@
                     </div>
                 </div> <!-- /.form-group -->
                 
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                <button type="submit" class="btn btn-primary btn-block" (click)="register(data)">Register</button>
             </form> <!-- /form -->
         </div> <!-- ./container -->
