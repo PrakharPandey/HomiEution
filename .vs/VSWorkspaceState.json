@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ETP-Express"
+    "\\ETP-Angular\\src\\app",
+    "\\ETP-Angular\\src\\app\\main",
+    "\\ETP-Angular\\src\\app\\register-as-teacher",
+    "\\ETP-Angular\\src\\assets",
+    "\\ETP-Express",
+    "\\ETP-Express\\model",
+    "\\ETP-Express\\routes",
+    "\\ETP-Express\\shared"
   ],
   "SelectedNode": "\\ETP-Express\\package.json",
   "PreviewInSolutionExplorer": false

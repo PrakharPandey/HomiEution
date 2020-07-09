@@ -1,31 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterAsTeacherService } from './register-as-teacher.service';
+import { TeacherService } from '../teacher.service';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register-as-teacher',
   templateUrl: './register-as-teacher.component.html',
   styleUrls: ['./register-as-teacher.component.css'],
-  providers:[RegisterAsTeacherService]
+  providers:[TeacherService]
 })
 export class RegisterAsTeacherComponent implements OnInit {
 
-  constructor(private registerasteacherservice:RegisterAsTeacherService , private router:Router) {} 
+  constructor(private registerasteacherservice: TeacherService , private router:Router) {} 
   public data = {
-    name: null,
-    email: null,
+    firstName: null,
     lastName: null,
+    email: null,
     phoneNumber: null,
-    address:null,
-    postalCode:null
+    address: null,
+    postalCode: null,
+    subjects: null
     };
 
   ngOnInit(): void {
   }
-  register(obj:any){
-    this.registerasteacherservice.registerAsTeacher(obj).subscribe(response=>{
-      if(response!=undefined){
+  register(request: any){
+    this.registerasteacherservice.registerAsTeacher(request).subscribe(response => {
+      if(response){
         alert("Registered Successfully");
+        this.data = new Object();
       }
     })
   }

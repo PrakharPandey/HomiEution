@@ -43,8 +43,14 @@ router.get('/findByPostalCode/:postalCode', (req, res) => {
 //Insert New Teacher
 router.post('/addTeacher', (req, res) => {
 	let teacherObj = new teacher()
-       
-teacherObj.name = 'Prakhar',
+  teacherObj.firstName = req.body.firstName;
+  teacherObj.lastName = req.body.lastName;
+  teacherObj.email = req.body.email;
+  teacherObj.phoneNumber = req.body.phoneNumber;
+  teacherObj.address = req.body.address;
+  teacherObj.postalCode = req.body.postalCode;
+  teacherObj.subjects = req.body.subjects;
+// teacherObj.subjects = req.body.subjects.split(',');
 
 	teacherObj.save((err, we) => {
 		if(err)

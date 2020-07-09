@@ -1,26 +1,16 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
 <div class="container">
             <form class="form-horizontal" role="form">
                 <h3>Register as a teacher</h3>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">First Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="First Name" class="form-control" [(ngModel)]="data.name" autofocus>
+                        <input type="text" id="firstName" placeholder="First Name" class="form-control" name="firstName" [(ngModel)]="data.firstName" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="lastName" class="col-sm-3 control-label">Last Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" [(ngModel)]="data.lastName" autofocus>
+                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" name="lastName" [(ngModel)]="data.lastName" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
@@ -32,19 +22,19 @@
                 <div class="form-group">
                     <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
                     <div class="col-sm-9">
-                        <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control" [(ngModel)]="data.phoneNumber">
+                        <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control" name="phoneNumber" [(ngModel)]="data.phoneNumber">
                     </div>
                 </div>
                 <div class="form-group">
                         <label for="Address" class="col-sm-3 control-label">Address </label>
                     <div class="col-sm-9">
-                        <input type="address" id="address" placeholder="Enter Address" class="form-control" [(ngModel)]="data.address">
+                        <input type="address" id="address" placeholder="Enter Address" class="form-control" name="address" [(ngModel)]="data.address">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="Address" class="col-sm-3 control-label">Postal Code</label>
                 <div class="col-sm-9">
-                    <input type="number" id="postalcode" placeholder="Enter postal code" class="form-control" [(ngModel)]="data.postalCode">
+                    <input type="number" id="postalcode" placeholder="Enter postal code" class="form-control" name="postalCode" [(ngModel)]="data.postalCode">
                 </div>
             </div>
                 <div class="form-group">
@@ -53,12 +43,12 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="hindi" value="Hindi">Hindi
+                                    <input type="radio" id="hindi" value="Hindi" name="subjects" [(ngModel)]="data.subjects">Hindi
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="english" value="English">English
+                                    <input type="radio" id="english" value="English" name="subjects" [(ngModel)]="data.subjects">English
                                 </label>
                             </div>
                         </div>

@@ -3,14 +3,16 @@ let Schema = mongoose.Schema
 
 
 let teacher = new Schema({
-id: String,
-name: String,
-age: String,
+firstName: String,
+lastName: String,
+email: String,
+phoneNumber: Number,
+address: String,
+postalCode: Number,
 subjects: Array,
+
 experience: String,
 rating: String,
-address: String,
-postalCode: String,
 achievements: String,
 expDescription: String
 })
