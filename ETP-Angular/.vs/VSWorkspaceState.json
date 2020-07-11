@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\teacher",
+    "\\src\\app\\teacher\\register-as-teacher"
   ],
+  "SelectedNode": "\\src\\app\\teacher\\teacher.service.ts",
   "PreviewInSolutionExplorer": false
 }

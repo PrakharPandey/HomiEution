@@ -59,7 +59,7 @@ router.post('/addTeacher', (req, res) => {
 
 	teacherObj.save((err, we) => {
 		if(err)
-			res.send('error saving weather')
+			res.send('Error saving teacher')
 		else
 		{
 			res.json(teacherObj)

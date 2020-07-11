@@ -20,3 +20,11 @@ export const environment = {
 export const teacher_ENV = {
   registerAsTeacher: 'teacher/addTeacher',
 }
+
+export const student_ENV = {
+  registerAsStudent: 'student/addStudent',
+}
+
+export const parent_ENV = {
+  registerAsParent: 'parent/addParent',
+}

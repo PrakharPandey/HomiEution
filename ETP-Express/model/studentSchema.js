@@ -3,16 +3,22 @@ let Schema = mongoose.Schema
 
 
 let student = new Schema({
-id: String
-name: String,
-age: Number,
-class: String,
-school: String,
+firstName: String,
+lastName: String,
+email: String,
+phoneNumber: Number,
 address: String,
-postalCode: String,
+postalCode: Number,
 subjects: Array,
-lastResult: String,
-description: String
+age: Number,
+uploadPhoto: String,
+class: Number,
+school: String,
+parentRegisterFlag: String,
+previousResult: String,
+introduction: String,
+parentUniqueID: String,
+parentPhoneNumber: Number,
 })
 
 module.exports = mongoose.model('Student', student)
