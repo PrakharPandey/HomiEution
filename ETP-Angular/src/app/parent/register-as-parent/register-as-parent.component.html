@@ -1,1 +1,146 @@
-<p>register-as-parent works!</p>
+
+    <div class="container-fluid">
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>HOMIEUTION</h3>
+                        <h4>"Re-inventing home learning"</h4>
+                        <input type="submit" name="" value="Login"/><br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Apply as a Parent</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" value="" [(ngModel)]="data.firstName"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" value=""  [(ngModel)]="data.lastName"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Address *" value="" [(ngModel)]="data.address"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"  placeholder="Postal Code *" value="" [(ngModel)]="data.postalCode" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Student Name" value=""  [(ngModel)]="data.studentName"/>
+                                        </div>
+                                         <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Brief about you" value="" [(ngModel)]="data.aboutYou"></textarea>
+                                        </div>
+                                          <div class="form-group">
+                                            <div class="col-sm-8"> 
+                                             <label class="radio inline">                                           
+                                              <h5>Have your student registered ?</h5>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-2 maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="isRegistered" value="yes"  [(ngModel)]="data.isRegistered">
+                                                    <span> Yes </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="isRegistered" value="no"  [(ngModel)]="data.isRegistered">
+                                                    <span>No</span> 
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" value="" [(ngModel)]="data.email"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone *" value="" [(ngModel)]="data.phoneNumber" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Age *" value="" [(ngModel)]="data.age"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Profession" value=""  [(ngModel)]="data.profession"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="School Name" value=""  [(ngModel)]="data.schoolName"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Breif about student" value="" [(ngModel)]="data.aboutStudent"></textarea>
+                                        </div>
+                                              <div class="form-group">
+                                            <div class="col-sm-8"> 
+                                             <label class="radio inline">                                           
+                                              <h5>Relation :</h5>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-2 maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="relation" value="father"  [(ngModel)]="data.relation">
+                                                    <span> Father </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="relation" value="relation"  [(ngModel)]="data.relation">
+                                                    <span>Mother</span> 
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+<div class="container">
+                                <div class="row">
+
+	<div class="col-md-6">
+                                	  <input type="text" class="form-control" placeholder="Enter Student unique ID , If registered" value=""  [(ngModel)]="data.studentUniqueID"/>
+                                	</div>
+                                </div>
+                                <table id="myTable" class=" table order-list">
+    <thead>
+        <tr>
+            <td>Subject</td>
+            <td>Previous Result</td>
+            <td colspan="1" style="text-align: left;">
+                <input type="button" class="btn btn-lg btn-block" id="addrow" (click)="onAdd()" value="Add Row" />
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data.subjects let index=index">
+            <td>
+                <input type="text" name="name" class="form-control" [(ngModel)]="data.subjects[index].subject" />
+            </td>
+            <td>
+                <input type="mail" name="mail"  class="form-control" [(ngModel)]="data.subjects[index].previousResult"/>
+            </td>
+            <td>
+                <input type="button" class="btn btn-lg btn-block " id="addrow" (click)="onDelete(index)" value="Delete" />
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+                                
+<div class="row">
+<div class="col-md-7">
+</div>
+<div class="col-md-5">
+<input type="submit" class="btnRegister btn-lg" (click)="register(data)" value="Register"/>
+ </div>
+</div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+    </div> <!-- ./container -->
+   
+
+<!------ Include the above in your HEAD tag ---------->
+
