@@ -1,3 +1,20 @@
+.navbar{
+    background: -webkit-linear-gradient(left, #6d7782, #135680);
+    
+}
+.navbar-brand{
+    color:  white;
+    }
+    .cont{
+    margin-top: 2%;
+    padding-top: 200px;
+}
+.card{
+    background-color: #6d7782;
+    height: 100px;
+    color: white;
+    padding-top: 8%;
+}
 .dad {
     margin-top: 80px;
     height: 1000px;
@@ -7,9 +24,9 @@
     padding: 0;
 }
 .register{
-    background: -webkit-linear-gradient(left, #7770e0, #00c6ff);
+   background: -webkit-linear-gradient(left, #6d7782, #135680);
     padding: 3%;
-    margin-top: 3%;
+  
   
 }
 .register-left{
