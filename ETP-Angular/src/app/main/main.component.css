@@ -1,4 +1,17 @@
 .navbar{
-	background:  #c2d1f0;
+	background: -webkit-linear-gradient(left, #6d7782, #135680);
 	
+}
+.navbar-brand{
+	color:  white;
+	}
+	.cont{
+	margin-top: 2%;
+	padding-top: 200px;
+}
+.card{
+	background-color: #6d7782;
+	height: 100px;
+	color: white;
+	padding-top: 8%;
 }
