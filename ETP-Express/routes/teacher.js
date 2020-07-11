@@ -50,7 +50,12 @@ router.post('/addTeacher', (req, res) => {
   teacherObj.address = req.body.address;
   teacherObj.postalCode = req.body.postalCode;
   teacherObj.subjects = req.body.subjects;
-// teacherObj.subjects = req.body.subjects.split(',');
+  teacherObj.age = req.body.age;
+  teacherObj.experience = req.body.experience;
+  teacherObj.rating = req.body.rating;
+  teacherObj.achievements = req.body.achievements;
+  teacherObj.description = req.body.description;
+  teacherObj.preferredLanguage = req.body.preferredLanguage;
 
 	teacherObj.save((err, we) => {
 		if(err)

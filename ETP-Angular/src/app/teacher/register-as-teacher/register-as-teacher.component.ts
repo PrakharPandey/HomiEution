@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 export class RegisterAsTeacherComponent implements OnInit {
 
   constructor(private registerasteacherservice: TeacherService , private router:Router) {} 
+
   public data = {
     firstName: null,
     lastName: null,
@@ -18,7 +19,16 @@ export class RegisterAsTeacherComponent implements OnInit {
     phoneNumber: null,
     address: null,
     postalCode: null,
-    subjects: null
+    age: null,
+    subjects: new Array({
+      subject: null,
+      experience: null,
+      proficiency: null
+    }),
+    preferredLanguage: null,
+    achivements: null,
+    description: null,
+    uploadPhoto: null
     };
 
   ngOnInit(): void {
@@ -27,8 +37,20 @@ export class RegisterAsTeacherComponent implements OnInit {
     this.registerasteacherservice.registerAsTeacher(request).subscribe(response => {
       if(response){
         alert("Registered Successfully");
-        this.data = new Object();
+      //  this.data = new Object();
       }
     })
+  }
+
+  onAdd(){
+    this.data.subjects.push({
+      subject: null,
+      experience: null,
+      proficiency: null
+    });
+  }
+
+  onDelete(event){
+    this.data.subjects.splice(event, 1);
   }
 }

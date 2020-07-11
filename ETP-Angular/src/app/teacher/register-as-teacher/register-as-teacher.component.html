@@ -1,60 +1,120 @@
+
+    <div class="container-fluid">
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>HOMIEUTION</h3>
+                        <h4>"Re-inventing home learning"</h4>
+                        <input type="submit" name="" value="Login"/><br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Apply as a Teacher</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" value="" [(ngModel)]="data.firstName"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" value=""  [(ngModel)]="data.lastName"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Address *" value="" [(ngModel)]="data.address"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"  placeholder="Postal Code *" value="" [(ngModel)]="data.postalCode" />
+                                        </div>
+                                         <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Achivements" value="" [(ngModel)]="data.achivements"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-8"> 
+                                             <label class="radio inline">                                           
+                                            <h5>Preferred Teaching Language :</h5>
+                                        </label>
+                                            </div>
+                                            <div class="col-sm-2 maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="preferredLanguage" value="english"  [(ngModel)]="data.preferredLanguage">
+                                                    <span> English </span> 
+                                                </label>
+                                            
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="preferredLanguage" value="hindi"  [(ngModel)]="data.preferredLanguage">
+                                                    <span>Hindi</span> 
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" value="" [(ngModel)]="data.email"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone *" value="" [(ngModel)]="data.phoneNumber" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Age *" value="" [(ngModel)]="data.age"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Experience Description" value="" [(ngModel)]="data.description"></textarea>
+                                        </div>
+                                    </div>
+                                    <table id="myTable" class=" table order-list">
+    <thead>
+        <tr>
+            <td>Subject</td>
+            <td>Experience</td>
+            <td>Proficiency</td>
+            <td colspan="1" style="text-align: left;">
+                <input type="button" class="btn btn-lg btn-block" id="addrow" (click)="onAdd()" value="Add Row" />
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data.subjects let index=index">
+            <td>
+                <input type="text" name="name" class="form-control" [(ngModel)]="data.subjects[index].subject" />
+            </td>
+            <td>
+                <input type="mail" name="mail"  class="form-control" [(ngModel)]="data.subjects[index].experience"/>
+            </td>
+            <td>
+                <input type="text" name="phone"  class="form-control" [(ngModel)]="data.subjects[index].proficiency"/>
+            </td>
+            <td>
+                <input type="button" class="btn btn-lg btn-block " id="addrow" (click)="onDelete(index)" value="Delete" />
+
+            </td>
+        </tr>
+    </tbody>
+</table>
 <div class="container">
-            <form class="form-horizontal" role="form">
-                <h3>Register as a teacher</h3>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">First Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="First Name" class="form-control" name="firstName" [(ngModel)]="data.firstName" autofocus>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="lastName" class="col-sm-3 control-label">Last Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" name="lastName" [(ngModel)]="data.lastName" autofocus>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">Email* </label>
-                    <div class="col-sm-9">
-                        <input type="email" id="email" placeholder="Email" class="form-control" name="email" [(ngModel)]="data.email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
-                    <div class="col-sm-9">
-                        <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control" name="phoneNumber" [(ngModel)]="data.phoneNumber">
-                    </div>
-                </div>
-                <div class="form-group">
-                        <label for="Address" class="col-sm-3 control-label">Address </label>
-                    <div class="col-sm-9">
-                        <input type="address" id="address" placeholder="Enter Address" class="form-control" name="address" [(ngModel)]="data.address">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="Address" class="col-sm-3 control-label">Postal Code</label>
-                <div class="col-sm-9">
-                    <input type="number" id="postalcode" placeholder="Enter postal code" class="form-control" name="postalCode" [(ngModel)]="data.postalCode">
-                </div>
-            </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-3">Preferred teching langauge</label>
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="hindi" value="Hindi" name="subjects" [(ngModel)]="data.subjects">Hindi
-                                </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="english" value="English" name="subjects" [(ngModel)]="data.subjects">English
-                                </label>
+<div class="row">
+<div class="col-md-7">
+</div>
+<div class="col-md-5">
+<input type="submit" class="btnRegister btn-lg" (click)="register(data)" value="Register"/>
+ </div>
+</div>
+</div>
                             </div>
                         </div>
                     </div>
-                </div> <!-- /.form-group -->
-                
-                <button type="submit" class="btn btn-primary btn-block" (click)="register(data)">Register</button>
-            </form> <!-- /form -->
-        </div> <!-- ./container -->
+                </div>
+            </div>      
+    </div> <!-- ./container -->
+   
+
+<!------ Include the above in your HEAD tag ---------->
+
