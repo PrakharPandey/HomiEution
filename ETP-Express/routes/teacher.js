@@ -17,14 +17,14 @@ router.use(bodyParser.urlencoded({
 
 
 //Find All Teachers
-router.get('/find', (req, res) => {
+router.get('/searchTeacher', (req, res) => {
 
-  teacher.find((err, emp) => {
+  teacher.find((err, res) => {
     if(err)
       res.send("error has occured while finding")
     else
     {
-      res.json(emp)
+      res.json(res)
     }
   });
 })
