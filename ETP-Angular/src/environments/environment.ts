@@ -19,4 +19,5 @@ export const environment = {
 
 export const teacher_ENV = {
   registerAsTeacher: 'teacher/addTeacher',
+  registerAsParent:'parent/addParent',
 }
