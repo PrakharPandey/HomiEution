@@ -5,13 +5,16 @@
 .navbar-brand{
 	color:  white;
 	}
-	.cont{
-	margin-top: 2%;
-	padding-top: 200px;
+.cont{
+	margin-top: 1%;
+	padding-top: 100px;
 }
 .card{
 	background-color: #6d7782;
 	height: 100px;
 	color: white;
 	padding-top: 8%;
+}
+.list{
+	color: white;
 }
