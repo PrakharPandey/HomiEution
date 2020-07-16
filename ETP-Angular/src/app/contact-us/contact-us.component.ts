@@ -11,5 +11,7 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+onSubmit(){
+	alert("Query noted");
+}
 }

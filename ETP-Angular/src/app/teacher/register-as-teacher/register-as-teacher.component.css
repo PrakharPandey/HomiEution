@@ -7,17 +7,20 @@
     padding: 0;
 }
 .navbar{
-    background: -webkit-linear-gradient(left, #6d7782, #135680);
+   background: -webkit-linear-gradient(left, #6d7782, #135680);
     
+}
+.list{
+    color: white;
 }
 .navbar-brand{
     color:  white;
-
     }
 .register{
     background: -webkit-linear-gradient(left, #6d7782, #135680);
     padding: 3%;
-    
+   
+  
 }
 .register-left{
     text-align: center;
@@ -38,8 +41,8 @@
 }
 .register-right{
     background: #f8f9fa;
-    border-top-radius: 10% 50%;
-    border-bottom-radius: 10% 50%;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
 }
 .register-left img{
     margin-top: 15%;

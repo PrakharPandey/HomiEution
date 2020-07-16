@@ -15,9 +15,10 @@
     }
 .register{
     background: -webkit-linear-gradient(left, #6d7782, #135680);
-    padding: 3%;
-   
-  
+    padding: 3%;  
+}
+.list{
+    color: white;
 }
 .register-left{
     text-align: center;
