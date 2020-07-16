@@ -26,20 +26,40 @@ export class RegisterAsTeacherComponent implements OnInit {
       proficiency: null
     }),
     preferredLanguage: null,
-    achivements: null,
+    achievements: null,
     description: null,
-    uploadPhoto: null
+    file: null
     };
+
+    image: File = null;
 
   ngOnInit(): void {
   }
   register(request: any){
-    this.registerasteacherservice.registerAsTeacher(request).subscribe(response => {
+    const formData = new FormData();
+    formData.append('file', this.image, this.image.name);
+    formData.append('firstName', this.data.firstName);
+    formData.append('lastName', this.data.lastName);
+    formData.append('email', this.data.email);
+    formData.append('phoneNumber', this.data.phoneNumber);
+    formData.append('address', this.data.address);
+    formData.append('postalCode', this.data.postalCode);
+    formData.append('age', this.data.age);
+    formData.append('subjects', this.data.subjects.toString());
+    formData.append('preferredLanguage', this.data.preferredLanguage);
+    formData.append('achievements', this.data.achievements);
+    formData.append('description', this.data.description);
+
+    this.registerasteacherservice.registerAsTeacher(formData).subscribe(response => {
       if(response){
         alert("Registered Successfully");
       //  this.data = new Object();
       }
     })
+  }
+
+  onUpload(item) {
+  this.image = <File>item.target.files[0];
   }
 
   onAdd(){

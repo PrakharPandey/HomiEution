@@ -19,10 +19,17 @@ export class TeacherService {
     }
    
     searchTeacher(data:any): Observable<any> {
-    return  this.http.get(environment.serviceURL + 'teacher/searchTeacher', data)
+    return  this.http.post(environment.serviceURL + 'teacher/searchTeacher', data)
     .map((response:any) => {
     return response;
     });
-    } 
+    }
+
+  viewTeacherProfile(data:any): Observable<any> {
+    return  this.http.post(environment.serviceURL + 'teacher/viewTeacher', data)
+    .map((response:any) => {
+    return response;
+    });
+    }  
     
 }
