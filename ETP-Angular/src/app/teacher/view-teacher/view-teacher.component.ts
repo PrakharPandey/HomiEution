@@ -12,7 +12,12 @@ export class ViewTeacherComponent implements OnInit {
 
   constructor(private teacherservice: TeacherService , private router:Router) {} 
     public data = {
-  	firstName: null
+  	firstName: null,
+    avgRating: null,
+    postalCode: null,
+    address: null,
+    teacherCode: null,
+    experience: null
     };
 
     showData: any

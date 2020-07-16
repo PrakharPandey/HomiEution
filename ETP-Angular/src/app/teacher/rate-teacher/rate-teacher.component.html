@@ -57,7 +57,7 @@
                                 	<div class="col-md-2">
                                 	</div>
                                 	<div class="col-md-5">
-                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value="" [(ngModel)]="data.name"  />
+                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value="" [(ngModel)]="data.firstName"  />
                                 		</div>
                                 		<div class="col-md-5">
                                 			<input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
@@ -70,25 +70,25 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name" value="" [(ngModel)]="data.name"/>
+                                            <input type="text" class="form-control" placeholder="Name" value="" [(ngModel)]="data.firstName"/>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Average Rating" value="" [(ngModel)]="data.avgRating"/>
                                         </div>
                                         <div class="form-group">
-                                            <input  class="form-control" placeholder="Area Code" value="" [(ngModel)]="data.areaCode"/>
+                                            <input  class="form-control" placeholder="Area Code" value="" [(ngModel)]="data.postalCode"/>
                                         </div>
                                           <div class="form-group">
-                                            <input  class="form-control" placeholder="Locality" value="" [(ngModel)]="data.locality"/>
+                                            <input  class="form-control" placeholder="Locality" value="" [(ngModel)]="data.address"/>
                                         </div>
                                           <div class="form-group">
                                             <input  class="form-control" placeholder="Teacher Code" value="" [(ngModel)]="data.teacherCode" />
                                         </div>
                                          <div class="form-group">
-                                            <input class="form-control" placeholder="Teacher Experience" value="" [(ngModel)]="data.teacherExp"/>
+                                            <input class="form-control" placeholder="Teacher Experience" value="" [(ngModel)]="data.experience"/>
                                         </div>
                                           <div class="form-group">
-                                            <input  class="form-control" placeholder="Provide your rating" value="" [(ngModel)]="data.yourRating" />
+                                            <input  class="form-control" placeholder="Provide your rating" value="" [(ngModel)]="data.rating" />
                                         </div>
                                         <div class="form-group">
                                             <textarea  rows="5" class="form-control"  placeholder="Provide feedback" value="" [(ngModel)]="data.feedBack"></textarea>

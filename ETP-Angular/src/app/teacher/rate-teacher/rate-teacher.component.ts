@@ -13,11 +13,18 @@ export class RateTeacherComponent implements OnInit {
   ngOnInit(): void {
   }
    public data = {
-  	teacherName: null
+   firstName: null,
+   avgRating: null,
+   postalCode: null,
+   address: null,
+   teacherCode: null,
+   experience: null,
+   rating: null,
+   feedBack: null
     };
 
   submit(request: any){
-    this.registerasteacherservice.rateATeacher(request).subscribe(response => {
+    this.teacherservice.rateATeacher(request).subscribe(response => {
       if(response){
         alert("Successfully Done");
       //  this.data = new Object();
@@ -25,7 +32,7 @@ export class RateTeacherComponent implements OnInit {
     })
   }
   search(request: any){
-    this.registerasteacherservice.searchTeacher(request).subscribe(response => {
+    this.teacherservice.searchTeacher(request).subscribe(response => {
       if(response){
         
       //  this.data = new Object();
