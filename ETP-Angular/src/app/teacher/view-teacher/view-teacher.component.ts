@@ -28,7 +28,7 @@ export class ViewTeacherComponent implements OnInit {
 search(request: any){
     this.teacherservice.viewTeacherProfile(request).subscribe(response => {
       if(response){
-        this.showData = response;
+        this.data = response;
       }
     })
   }

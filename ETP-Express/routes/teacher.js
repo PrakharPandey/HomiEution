@@ -8,7 +8,7 @@ var multer = require('multer')
 const mongoURI = 'mongodb+srv://prakhar:passiton@cluster0.sjrlm.azure.mongodb.net/etp?retryWrites=true&w=majority';
 mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
 
-var teacher = require ('../model/studentSchema')
+var teacher = require ('../model/teacherSchema')
 
 
 router.use(bodyParser.json())
@@ -41,8 +41,9 @@ router.post('/searchTeacher', (req, res) => {
   });
 })
 
-router.get('/findByPostalCode/:postalCode', (req, res) => {
-  teacher.findOne({postalCode: req.params.postalCode}, (err, we) => {
+router.post('/viewTeacher', (req, res) => {
+  console.log(req.body.firstName)
+  teacher.findOne({firstName: req.body.firstName}, (err, we) => {
     if(err)
       res.send("error has occured while finding")
     else

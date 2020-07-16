@@ -26,14 +26,14 @@ export class TeacherService {
     }
    
     searchTeacher(data:any): Observable<any> {
-    return  this.http.post(environment.serviceURL + 'teacher/searchTeacher', data)
+    return  this.http.post(environment.serviceURL + teacher_ENV.searchTeacher, data)
     .map((response:any) => {
     return response;
     });
     }
 
-  viewTeacherProfile(data:any): Observable<any> {
-    return  this.http.post(environment.serviceURL + 'teacher/viewTeacher', data)
+    viewTeacherProfile(data:any): Observable<any> {
+    return  this.http.post(environment.serviceURL + teacher_ENV.viewTeacher, data)
     .map((response:any) => {
     return response;
     });

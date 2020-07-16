@@ -32,10 +32,9 @@ export class RateTeacherComponent implements OnInit {
     })
   }
   search(request: any){
-    this.teacherservice.searchTeacher(request).subscribe(response => {
+    this.teacherservice.viewTeacherProfile(request).subscribe(response => {
       if(response){
-        
-      //  this.data = new Object();
+          this.data = response;
       }
     })
   }
