@@ -12,10 +12,11 @@ postalCode: Number,
 subjects: Array,
 age: Number,
 experience: String,
-rating: String,
+rating: Number,
 achievements: String,
 description: String,
 preferredLanguage: String,
+feedBack: String
 })
 
 module.exports = mongoose.model('teacher', teacher)

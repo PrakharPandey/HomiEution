@@ -42,7 +42,6 @@ router.post('/searchTeacher', (req, res) => {
 })
 
 router.post('/viewTeacher', (req, res) => {
-  console.log(req.body.firstName)
   teacher.findOne({firstName: req.body.firstName}, (err, we) => {
     if(err)
       res.send("error has occured while finding")
@@ -82,13 +81,14 @@ router.post('/addTeacher', upload, (req, res) => {
 })
 
 //Find Employee By Id and Update
-router.put('/update/:date', (req, res) => {
+router.post('/rateTeacher', (req, res) => {
   teacher.update({
-  	date: req.params.date
+  	firstName: req.body.firstName
   }, { $set: 
-  	{min: req.body.min,
-    max: req.body.max,
-    condition: req.body.condition}}, 
+  	{
+    rating: req.body.rating,
+    feedBack: req.body.feedBack
+    }}, 
   	{upsert: true},
   	(err, empp) => {
   		if(err)
