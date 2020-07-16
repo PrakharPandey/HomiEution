@@ -16,15 +16,21 @@ export class SearchTeacherComponent implements OnInit {
   	subject: null
     };
 
+    showData: any
+
   ngOnInit(): void {
   }
 
 search(request: any){
     this.teacherservice.searchTeacher(request).subscribe(response => {
       if(response){
-        console.log(response);
+        this.showData = response;
       }
     })
   }
+
+  onClick(url){
+  this.router.navigate([url]);
+}
 
 }

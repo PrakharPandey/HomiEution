@@ -21,6 +21,7 @@ export const teacher_ENV = {
   registerAsTeacher: 'teacher/addTeacher',
   searchTeacher: 'teacher/searchTeacher',
   rateATeacher: 'teacher/rateTeacher'
+  viewTeacher: 'teacher/viewTeacher',
 }
 
 export const student_ENV = {

@@ -57,10 +57,11 @@
                                 	<div class="col-md-2">
                                 	</div>
                                 	<div class="col-md-5">
-                                		<input type="text" class="form-control subject" placeholder="Subject" value=""  />
+                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value=""  
+                                     [(ngModel)]="data.name" />
                                 		</div>
                                 		<div class="col-md-5">
-                                			<input type="submit" class="btnRegister btn-lg"  value="Search"/>
+                                			<input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
                                 			</div>
                                 		</div>
                                 		</div>
@@ -70,22 +71,22 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name" value="" />
+                                            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="data.name" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Average Rating" value="" />
+                                            <input type="text" class="form-control" placeholder="Average Rating"  [(ngModel)]="data.avgRating" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Area Code" value="" />
+                                            <input type="password" class="form-control" placeholder="Area Code"  [(ngModel)]="data.areaCode" value="" />
                                         </div>
                                           <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Locality" value="" />
+                                            <input type="password" class="form-control" placeholder="Locality"  [(ngModel)]="data.locality" value="" />
                                         </div>
                                           <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Teacher Code" value="" />
+                                            <input type="password" class="form-control" placeholder="Teacher Code"  [(ngModel)]="data.teacherCode" value="" />
                                         </div>
                                          <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Teacher Experience" value="" />
+                                            <input type="password" class="form-control" placeholder="Teacher Experience"  [(ngModel)]="data.experience"  value="" />
                                         </div>
                                       
                             </div>

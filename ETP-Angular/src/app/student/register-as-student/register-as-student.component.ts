@@ -31,13 +31,34 @@ export class RegisterAsStudentComponent implements OnInit {
     introduction: null,
     parentUniqueID: null,
     parentPhoneNumber: null,
-    uploadPhoto: null
+    uploadPhoto: null,
+    file: null
     };
+
+    image: File = null;
 
   ngOnInit(): void {
   }
   register(request: any){
-    this.registerasstudentservice.registerAsStudent(request).subscribe(response => {
+    const formData = new FormData();
+    formData.append('file', this.image, this.image.name);
+    formData.append('firstName', this.data.firstName);
+    formData.append('lastName', this.data.lastName);
+    formData.append('email', this.data.email);
+    formData.append('phoneNumber', this.data.phoneNumber);
+    formData.append('address', this.data.address);
+    formData.append('postalCode', this.data.postalCode);
+    formData.append('age', this.data.age);
+    formData.append('subjects', this.data.subjects.toString());
+    formData.append('class', this.data.class);
+    formData.append('school', this.data.school);
+    formData.append('parentRegisterFlag', this.data.parentRegisterFlag);
+    formData.append('previousResult', this.data.previousResult);
+    formData.append('introduction', this.data.introduction);
+    formData.append('parentUniqueID', this.data.parentUniqueID);
+    formData.append('parentPhoneNumber', this.data.parentPhoneNumber);
+
+    this.registerasstudentservice.registerAsStudent(formData).subscribe(response => {
       if(response){
         alert("Registered Successfully");
       //  this.data = new Object();
@@ -50,6 +71,10 @@ export class RegisterAsStudentComponent implements OnInit {
       subject: null,
       previousResult: null
     });
+  }
+
+  onUpload(item) {
+  this.image = <File>item.target.files[0];
   }
 
   onDelete(event){

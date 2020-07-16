@@ -1,3 +1,11 @@
+
+ <nav class="navbar navbar-toggleable-md navbar navbar navbar-fixed-top bar">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">HomiEution</a>
+        </nav>
+
 <nav class="navbar">
   <div class="container-fluid">
     <div>
@@ -53,6 +61,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
+<form enctype="multipart/form-data">
 <div class="container-fluid register">
                 <div class="row">
                     <div class="col-md-3 register-left">
@@ -68,22 +77,22 @@
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" [(ngModel)]="data.firstName"/>
+                                            <input type="text" class="form-control" placeholder="First Name *" value="" name="firstName" [(ngModel)]="data.firstName"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value=""  [(ngModel)]="data.lastName"/>
+                                            <input type="text" class="form-control" placeholder="Last Name *" value="" name="lastName" [(ngModel)]="data.lastName"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Address *" value="" [(ngModel)]="data.address"/>
+                                            <input type="text" class="form-control" placeholder="Address *" value="" name="address" [(ngModel)]="data.address"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" class="form-control"  placeholder="Postal Code *" value="" [(ngModel)]="data.postalCode" />
+                                            <input type="number" class="form-control"  placeholder="Postal Code *" name="postalCode" value="" [(ngModel)]="data.postalCode" />
                                         </div>
                                          <div class="form-group">
-                                            <input class="form-control" placeholder="Class" value="" [(ngModel)]="data.class" />
+                                            <input class="form-control" placeholder="Class" value="" name="class" [(ngModel)]="data.class" />
                                         </div>
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Previous Result" value="" [(ngModel)]="data.previousResult" />
+                                            <input class="form-control" placeholder="Previous Result" value="" name="previousResult" [(ngModel)]="data.previousResult" />
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-8"> 
@@ -93,7 +102,7 @@
                                             </div>
                                             <div class="col-sm-2 maxl">
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="parentRegisterFlag" value="yes"  [(ngModel)]="data.parentRegisterFlag">
+                                                    <input type="radio" name="parentRegisterFlag" value="yes" [(ngModel)]="data.parentRegisterFlag">
                                                     <span> Yes </span> 
                                                 </label>
                                             
@@ -106,22 +115,22 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email *" value="" [(ngModel)]="data.email"/>
+                                            <input type="email" class="form-control" placeholder="Email *" value="" name="email" [(ngModel)]="data.email"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone *" value="" [(ngModel)]="data.phoneNumber" />
+                                            <input type="number" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone *" value="" [(ngModel)]="data.phoneNumber" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Parent Phone Number *" value="" [(ngModel)]="data.parentPhoneNumber" />
+                                            <input type="number" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Parent Phone Number *" value="" [(ngModel)]="data.parentPhoneNumber" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Age *" value="" [(ngModel)]="data.age"/>
+                                            <input type="number" class="form-control" placeholder="Age *" value="" name="age" [(ngModel)]="data.age"/>
                                         </div>
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="School" value="" [(ngModel)]="data.school" />
+                                            <input class="form-control" placeholder="School" value="" name="school" [(ngModel)]="data.school" />
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="6" placeholder="Brief Introduction" value="" [(ngModel)]="data.introduction"></textarea>
+                                            <textarea class="form-control" rows="6" placeholder="Brief Introduction" value="" name="introduction" [(ngModel)]="data.introduction"></textarea>
                                         </div>
                                     </div>
                                     <div class="container">
@@ -130,7 +139,7 @@
  
 
     <div class="col-md-6">
-                                      <input type="text" class="form-control" placeholder="Enter Parent unique ID , If registered" value=""  [(ngModel)]="data.parentUniqueID"/>
+                                      <input type="text" class="form-control" placeholder="Enter Parent unique ID , If registered" value="" [(ngModel)]="data.parentUniqueID"/>
                                     </div>
                                 </div>
                                     <table id="myTable" class=" table order-list">
@@ -161,6 +170,7 @@
 
 <div class="row">
 <div class="col-md-7">
+    <input type="file" name="file" class="form-control" (change)="onUpload($event)">
 </div>
 <div class="col-md-5">
 <input type="submit" class="btnRegister btn-lg" (click)="register(data)" value="Register"/>
@@ -173,7 +183,7 @@
                 </div>
             </div>      
     </div> <!-- ./container -->
-   
+   </form>
 
 <!------ Include the above in your HEAD tag ---------->
 
