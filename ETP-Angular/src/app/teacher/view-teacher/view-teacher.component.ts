@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TeacherService } from '../teacher.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-view-teacher',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewTeacherComponent implements OnInit {
 
-  constructor() { }
+  constructor(private teacherservice: TeacherService , private router:Router) {} 
 
   ngOnInit(): void {
   }
-
+  public data = {
+  	teacherName: null
+    };
+  search(request: any){
+    this.registerasteacherservice.searchTeacher(request).subscribe(response => {
+      if(response){
+        
+      //  this.data = new Object();
+      }
+    })
+  }
 }

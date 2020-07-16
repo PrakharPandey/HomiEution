@@ -1,1 +1,106 @@
-<p>rate-teacher works!</p>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div>
+      <h3><a class="list" href="/main">HOMIEUTION</a></h3>
+    </div>
+    <ul class="navbar-right">
+      </ul>
+       <ul class="navbar-right">
+      </ul>
+       <ul class="navbar-right">
+      </ul>
+       <ul class="navbar-right">
+      </ul>
+       <ul class="navbar-right">
+      </ul>
+       <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+ <ul class="navbar-right">
+      </ul>
+      <ul class="navbar-right">
+      <a class="list" href="/contactus">Contact Us</a>
+      </ul>
+       <ul class="navbar-right">
+      <a class="list" href="#">Team</a>
+    </ul> 
+  </div>
+</nav>
+<div class="container-fluid register">
+                <div class="row">
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Rate Teacher</h3>
+                                <div class="row register-form">
+                                	<div class="col-md-2">
+                                	</div>
+                                	<div class="col-md-5">
+                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value="" [(ngModel)]="data.name"  />
+                                		</div>
+                                		<div class="col-md-5">
+                                			<input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
+                                			</div>
+                                		</div>
+                                		</div>
+                                	</div>
+                                
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name" value="" [(ngModel)]="data.name"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Average Rating" value="" [(ngModel)]="data.avgRating"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input  class="form-control" placeholder="Area Code" value="" [(ngModel)]="data.areaCode"/>
+                                        </div>
+                                          <div class="form-group">
+                                            <input  class="form-control" placeholder="Locality" value="" [(ngModel)]="data.locality"/>
+                                        </div>
+                                          <div class="form-group">
+                                            <input  class="form-control" placeholder="Teacher Code" value="" [(ngModel)]="data.teacherCode" />
+                                        </div>
+                                         <div class="form-group">
+                                            <input class="form-control" placeholder="Teacher Experience" value="" [(ngModel)]="data.teacherExp"/>
+                                        </div>
+                                          <div class="form-group">
+                                            <input  class="form-control" placeholder="Provide your rating" value="" [(ngModel)]="data.yourRating" />
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea  rows="5" class="form-control"  placeholder="Provide feedback" value="" [(ngModel)]="data.feedBack"></textarea>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <input type="submit" class="btnRegister btn-lg"  (click)="submit(data)" value="Submit"/>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                    </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>

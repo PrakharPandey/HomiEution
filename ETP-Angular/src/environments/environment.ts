@@ -20,6 +20,7 @@ export const environment = {
 export const teacher_ENV = {
   registerAsTeacher: 'teacher/addTeacher',
   searchTeacher: 'teacher/searchTeacher',
+  rateATeacher: 'teacher/rateTeacher'
 }
 
 export const student_ENV = {

@@ -17,6 +17,13 @@ export class TeacherService {
     return response;
     });
     }
+
+    rateATeacher(data:any): Observable<any> {
+    return  this.http.post(environment.serviceURL + teacher_ENV.rateATeacher, data)
+    .map((response:any) => {
+    return response;
+    });
+    }
    
     searchTeacher(data:any): Observable<any> {
     return  this.http.get(environment.serviceURL + 'teacher/searchTeacher', data)
