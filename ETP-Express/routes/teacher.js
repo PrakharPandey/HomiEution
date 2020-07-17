@@ -19,7 +19,6 @@ router.use(bodyParser.urlencoded({
 const storage = multer.diskStorage({
   destination: '../ETP-Angular/src/assets/teacherProfiles',
   filename: (req, file, cb) => {
-    console.log(file);
 cb(null, file.fieldname+'_'+Date.now()+path.extname(file.originalname));
   }
 });
@@ -54,6 +53,7 @@ router.post('/viewTeacher', (req, res) => {
 
 //Insert New Teacher
 router.post('/addTeacher', upload, (req, res) => {
+  console.log(req.file)
 	let teacherObj = new teacher()
   teacherObj.firstName = req.body.firstName == 'null' ? null : req.body.firstName;
   teacherObj.lastName = req.body.lastName == 'null' ? null : req.body.lastName;

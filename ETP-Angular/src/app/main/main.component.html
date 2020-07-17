@@ -53,10 +53,10 @@
         	 <div class="card-columns">
   <div class="card btn btn-primary" (click)="onClick('/registerasteacher')">
     <div class="card-body text-center">
-      <p class="card-text">REGISTER AS A TEACHER</p>
+      <p class="card-text">REGISTER AS TEACHER</p>
     </div>
   </div>
-  <div class="card btn btn-primary">
+  <div class="card btn btn-primary" (click)="onClick('/viewteacher')">
     <div class="card-body text-center">
       <p class="card-text">VIEW TEACHER PROFILE</p>
     </div>
@@ -87,7 +87,7 @@
       <p class="card-text">REGISTER AS PARENT</p>
     </div>
   </div>
-  <div class="card btn btn-primary">
+  <div class="card btn btn-primary" (click)="onClick('/rateateacher')">
     <div class="card-body text-center">
       <p class="card-text">RATE TEACHER</p>
     </div>

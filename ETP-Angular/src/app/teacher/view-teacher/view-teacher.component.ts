@@ -17,7 +17,8 @@ export class ViewTeacherComponent implements OnInit {
     postalCode: null,
     address: null,
     teacherCode: null,
-    experience: null
+    experience: null,
+    uploadPhoto: null,
     };
 
     showData: any

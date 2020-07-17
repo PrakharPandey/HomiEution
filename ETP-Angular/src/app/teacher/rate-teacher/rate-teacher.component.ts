@@ -20,7 +20,8 @@ export class RateTeacherComponent implements OnInit {
    teacherCode: null,
    experience: null,
    rating: null,
-   feedBack: null
+   feedBack: null,
+   uploadPhoto: null
     };
 
   submit(request: any){

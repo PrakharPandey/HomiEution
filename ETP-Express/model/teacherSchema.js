@@ -16,7 +16,8 @@ rating: Number,
 achievements: String,
 description: String,
 preferredLanguage: String,
-feedBack: String
+feedBack: String,
+uploadPhoto: String,
 })
 
 module.exports = mongoose.model('teacher', teacher)
