@@ -68,10 +68,9 @@
                                 		<!-- <div class="row">
                                 			<div class="col-md-4"> -->
                                 				<section id="team" class="pb-5">
-    <div class="container">
         <div class="row">
             <!-- Team member -->
-            <div *ngFor="let item of showData" class="col-md-4">
+            <div *ngFor="let item of showData" class="col-md-6">
                 <div class="image-flip" >
                     <div class="mainflip flip-0" (click)="onClick('/viewteacher')">
                         <div class="frontside">
@@ -80,29 +79,29 @@
                                     <p><img class="img-thumbnail" src="assets/teacherProfiles/{{item.uploadPhoto}}" onerror="this.src='assets/dummy.png'"></p>
                                     <h4 class="card-title">{{item.firstName}} {{item.lastName}}</h4>
                                   <div class="row">
-                                        <div class="col-sm-7 text-left font-weight-bold">
+                                        <div class="col-sm-4 text-left font-weight-bold">
 Rating :
 
                                         </div>
-                                        <div class="text-center">
+                                        <div class="col-sm-6">
 {{item.rating}}
 
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-7 text-left font-weight-bold">
-Address:
+                                        <div class="col-sm-3 text-left font-weight-bold">
+Phone:
                                         </div>
-                                        <div class="text-center">
-{{item.address}}
+                                        <div class="col-sm-7">
+{{item.phoneNumber}}
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-7 text-left font-weight-bold">
-Experience:
+                                        <div class="col-sm-3 text-left font-weight-bold">
+Email:
                                         </div>
-                                        <div class="text-center">
-{{item.description}}
+                                        <div class="col-sm-7 ">
+{{item.email}}
                                         </div>
                                     </div>
                                     
@@ -114,38 +113,43 @@ Experience:
                             <div class="card">
                                 <div class="card-body text-center mt-4">
                                     <h4 class="card-title">{{item.firstName}} {{item.lastName}}</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     <div class="row">
                                         <div class="col-sm-7 text-left font-weight-bold">
 Achievements:
                                         </div>
-                                        <div class="text-center">
+                                        </div>
+                                        <div class=" row ">
+                                          <div class="col-sm-12 text-left">
 {{item.achievements}}
                                         </div>
+
                                         </div>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        
+                                        <div class="row">
+                                        <div class="col-sm-7 text-left font-weight-bold">
+Experience:
+                                        </div>
+                                    </div>
+
+                                        <div class=" row">
+                                                    <div class="col-sm-12 text-left ">
+{{item.description}}
+                                        </div>
+
+                                        </div>
+                                                     <div class="row">
+                                        <div class="col-sm-7 text-left font-weight-bold">
+Address:
+                                        </div>
+                                    </div>
+
+                                        <div class=" row">
+                                                    <div class="col-sm-12 text-left ">
+{{item.address}}
+                                        </div>
+
+                                        </div>
+                                      </div>
                             </div>
                         </div>
                     </div>
@@ -155,7 +159,7 @@ Achievements:
           
 
         </div>
-    </div>
+   
 </section>
                       		
 
