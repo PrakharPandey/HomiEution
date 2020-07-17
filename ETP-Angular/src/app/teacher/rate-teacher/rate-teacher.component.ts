@@ -24,11 +24,12 @@ export class RateTeacherComponent implements OnInit {
    uploadPhoto: null
     };
 
+    show: boolean = false;
+
   submit(request: any){
     this.teacherservice.rateATeacher(request).subscribe(response => {
       if(response){
         alert("Successfully Done");
-      //  this.data = new Object();
       }
     })
   }
@@ -36,6 +37,7 @@ export class RateTeacherComponent implements OnInit {
     this.teacherservice.viewTeacherProfile(request).subscribe(response => {
       if(response){
           this.data = response;
+          this.show = true;
       }
     })
   }

@@ -69,7 +69,10 @@
                                 		</div>
                                 		</div>
                                 	</div>
+                                  <div *ngIf="show"> 
                                 <div class="row">
+                                  <div class="col-md-1">
+                                  </div>
                                     <div class="col-md-3">
                                       <div class="row px-5 mx-2">
                                     <p><img class="img-thumbnail" src="assets/teacherProfiles/{{data.uploadPhoto}}" onerror="this.src='assets/dummy.png'" width="100" height="100"></p>
@@ -77,28 +80,28 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name" value="" [(ngModel)]="data.firstName"/>
+                                            <input type="text" class="form-control" placeholder="Name" value="" [(ngModel)]="data.firstName" name="firstName"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Average Rating" value="" [(ngModel)]="data.avgRating"/>
+                                            <input type="text" class="form-control" placeholder="Average Rating" value="" [(ngModel)]="data.avgRating" name="avgRating"/>
                                         </div>
                                         <div class="form-group">
-                                            <input  class="form-control" placeholder="Area Code" value="" [(ngModel)]="data.postalCode"/>
+                                            <input  class="form-control" placeholder="Area Code" value="" [(ngModel)]="data.postalCode" name="postalCode"/>
                                         </div>
                                           <div class="form-group">
-                                            <input  class="form-control" placeholder="Locality" value="" [(ngModel)]="data.address"/>
+                                            <input  class="form-control" placeholder="Locality" value="" [(ngModel)]="data.address" name="address"/>
                                         </div>
                                           <div class="form-group">
-                                            <input  class="form-control" placeholder="Teacher Code" value="" [(ngModel)]="data.teacherCode" />
+                                            <input  class="form-control" placeholder="Teacher Code" value="" [(ngModel)]="data.teacherCode" name="teacherCode"/>
                                         </div>
                                          <div class="form-group">
-                                            <input class="form-control" placeholder="Teacher Experience" value="" [(ngModel)]="data.experience"/>
+                                            <input class="form-control" placeholder="Teacher Experience" value="" [(ngModel)]="data.experience" name="experience"/>
                                         </div>
                                           <div class="form-group">
-                                            <input type="number" class="form-control" placeholder="Provide your rating" value="" [(ngModel)]="data.rating" />
+                                            <input type="number" class="form-control" placeholder="Provide your rating" value="" [(ngModel)]="data.rating" name="rating"/>
                                         </div>
                                         <div class="form-group">
-                                            <textarea  rows="5" class="form-control"  placeholder="Provide feedback" value="" [(ngModel)]="data.feedBack"></textarea>
+                                            <textarea  rows="5" class="form-control"  placeholder="Provide feedback" value="" [(ngModel)]="data.feedBack" name="feedBack"></textarea>
                                         </div>
                                         
                                         
@@ -119,6 +122,7 @@
                                       <div class="col-md-4">
                                     </div>
                                   </div>
+                                </div>
                         </div>
                         </div>
                         </div>
