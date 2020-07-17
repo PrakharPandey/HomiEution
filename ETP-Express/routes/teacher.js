@@ -68,7 +68,8 @@ router.post('/addTeacher', upload, (req, res) => {
   teacherObj.achievements = req.body.achievements == 'null' ? null : req.body.achievements;
   teacherObj.description = req.body.description == 'null' ? null : req.body.description;
   teacherObj.preferredLanguage = req.body.preferredLanguage == 'null' ? null : req.body.preferredLanguage;
-  teacherObj.uploadPhoto = req.file.filename == 'null' ? null : req.file.filename;
+  if(req.file)
+    teacherObj.uploadPhoto = req.file.filename == 'null' ? null : req.file.filename;
 
 	teacherObj.save((err, we) => {
 		if(err)

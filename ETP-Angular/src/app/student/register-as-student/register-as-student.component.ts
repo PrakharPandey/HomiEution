@@ -41,7 +41,8 @@ export class RegisterAsStudentComponent implements OnInit {
   }
   register(request: any){
     const formData = new FormData();
-    formData.append('file', this.image, this.image.name);
+    if(this.image)
+      formData.append('file', this.image, this.image.name);
     formData.append('firstName', this.data.firstName);
     formData.append('lastName', this.data.lastName);
     formData.append('email', this.data.email);
