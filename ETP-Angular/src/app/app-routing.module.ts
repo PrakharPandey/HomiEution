@@ -11,23 +11,23 @@ import { MainComponent } from './main/main.component';
 import { RateTeacherComponent } from './teacher/rate-teacher/rate-teacher.component';
 
 const routes: Routes = [
-  {path: '' , redirectTo: '/main' ,pathMatch:'full'},
-  {path: 'main', component: MainComponent},
-  {path: 'registerasteacher', component: RegisterAsTeacherComponent },
-  {path: 'registerasstudent', component: RegisterAsStudentComponent },
-  {path: 'registerasparent', component: RegisterAsParentComponent },
-  {path: 'searchteacher', component: SearchTeacherComponent },
-  {path: 'viewteacher', component: ViewTeacherComponent},
-  {path: 'contactus', component: ContactUsComponent },
-  {path: 'rateateacher',component: RateTeacherComponent},
+{path: '' , redirectTo: '/main' ,pathMatch:'full'},
+{path: 'main', component: MainComponent},
+{path: 'registerasteacher', component: RegisterAsTeacherComponent },
+{path: 'registerasstudent', component: RegisterAsStudentComponent },
+{path: 'registerasparent', component: RegisterAsParentComponent },
+{path: 'searchteacher', component: SearchTeacherComponent },
+{path: 'viewteacher', component: ViewTeacherComponent},
+{path: 'contactus', component: ContactUsComponent },
+{path: 'rateateacher',component: RateTeacherComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-  
-  ],
-  exports: [RouterModule],
-  bootstrap: [AppComponent]
+imports: [RouterModule.forRoot(routes),
+
+],
+exports: [RouterModule],
+bootstrap: [AppComponent]
 })
 
 export class AppRoutingModule { }

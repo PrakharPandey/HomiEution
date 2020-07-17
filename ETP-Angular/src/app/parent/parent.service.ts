@@ -5,17 +5,17 @@ import 'rxjs/Rx';
 import { environment, parent_ENV } from '../../environments/environment'
 
 @Injectable({
-  providedIn: 'root'
+providedIn: 'root'
 })
 export class ParentService {
 
-  constructor(private http: HttpClient) {}
+constructor(private http: HttpClient) {}
 
-  registerAsTeacher(data:any): Observable<any> {
-    return  this.http.post(environment.serviceURL + parent_ENV.registerAsParent, data)
-    .map((response:any) => {
-    return response;
-    });
-    }
-    
+registerAsTeacher(data:any): Observable<any> {
+return  this.http.post(environment.serviceURL + parent_ENV.registerAsParent, data)
+.map((response:any) => {
+return response;
+});
+}
+
 }

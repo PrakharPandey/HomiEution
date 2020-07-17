@@ -5,17 +5,17 @@ import 'rxjs/Rx';
 import { environment, student_ENV } from '../../environments/environment'
 
 @Injectable({
-  providedIn: 'root'
+providedIn: 'root'
 })
 export class StudentService {
 
-  constructor(private http: HttpClient) {}
+constructor(private http: HttpClient) {}
 
-  registerAsStudent(data:any): Observable<any> {
-    return  this.http.post(environment.serviceURL + student_ENV.registerAsStudent, data)
-    .map((response:any) => {
-    return response;
-    });
-    }
-    
+registerAsStudent(data:any): Observable<any> {
+return  this.http.post(environment.serviceURL + student_ENV.registerAsStudent, data)
+.map((response:any) => {
+return response;
+});
+}
+
 }

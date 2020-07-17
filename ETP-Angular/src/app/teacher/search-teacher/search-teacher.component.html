@@ -4,45 +4,45 @@
       <h3><a class="list" href="/main">HOMIEUTION</a></h3>
     </div>
     <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
-      <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
       <a class="list" href="/contactus">Contact Us</a>
-      </ul>
-       <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
       <a class="list" href="#">Team</a>
     </ul> 
   </div>
@@ -54,130 +54,130 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <div class="container-fluid register">
-                <div class="row">
-                    <div class="col-md-9 register-right">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Search Teacher</h3>
-                                <div class="row register-form">
-                                	<div class="col-md-2">
-                                	</div>
-                                	<div class="col-md-5">
-                                		<input type="text" class="form-control subject" placeholder="Subject" value="" [(ngModel)]="data.subject" />
-                                		</div>
-                                		<div class="col-md-5">
-                                			<input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
-                                			</div>
-                                		</div>
+  <div class="row">
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h3 class="register-heading">Search Teacher</h3>
+          <div class="row register-form">
+           <div class="col-md-2">
+           </div>
+           <div class="col-md-5">
+            <input type="text" class="form-control subject" placeholder="Subject" value="" [(ngModel)]="data.subject" />
+          </div>
+          <div class="col-md-5">
+           <input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
+         </div>
+       </div>
                                 		<!-- <div class="row">
-                                			<div class="col-md-4"> -->
-                                				<section id="team" class="pb-5">
-        <div class="row">
-            <!-- Team member -->
-            <div *ngFor="let item of showData" class="col-md-6">
-                <div class="image-flip" >
-                    <div class="mainflip flip-0" (click)="onClick('/viewteacher')">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class="img-thumbnail" src="assets/teacherProfiles/{{item.uploadPhoto}}" onerror="this.src='assets/dummy.png'"></p>
-                                    <h4 class="card-title">{{item.firstName}} {{item.lastName}}</h4>
-                                  <div class="row">
-                                        <div class="col-sm-4 text-left font-weight-bold">
-Rating :
+                                   <div class="col-md-4"> -->
+                                    <section id="team" class="pb-5">
+                                      <div class="row">
+                                        <!-- Team member -->
+                                        <div *ngFor="let item of showData" class="col-md-6">
+                                          <div class="image-flip" >
+                                            <div class="mainflip flip-0" (click)="onClick('/viewteacher')">
+                                              <div class="frontside">
+                                                <div class="card">
+                                                  <div class="card-body text-center">
+                                                    <p><img class="img-thumbnail" src="assets/teacherProfiles/{{item.uploadPhoto}}" onerror="this.src='assets/dummy.png'"></p>
+                                                    <h4 class="card-title">{{item.firstName}} {{item.lastName}}</h4>
+                                                    <div class="row">
+                                                      <div class="col-sm-4 text-left font-weight-bold">
+                                                        Rating :
 
-                                        </div>
-                                        <div class="col-sm-6">
-{{item.rating}}
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        {{item.rating}}
 
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-3 text-left font-weight-bold">
-Phone:
-                                        </div>
-                                        <div class="col-sm-7">
-{{item.phoneNumber}}
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-3 text-left font-weight-bold">
-Email:
-                                        </div>
-                                        <div class="col-sm-7 ">
-{{item.email}}
-                                        </div>
-                                    </div>
-                                    
-                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">{{item.firstName}} {{item.lastName}}</h4>
-                                    <div class="row">
-                                        <div class="col-sm-7 text-left font-weight-bold">
-Achievements:
-                                        </div>
-                                        </div>
-                                        <div class=" row ">
-                                          <div class="col-sm-12 text-left">
-{{item.achievements}}
-                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="row">
+                                                      <div class="col-sm-3 text-left font-weight-bold">
+                                                        Phone:
+                                                      </div>
+                                                      <div class="col-sm-7">
+                                                        {{item.phoneNumber}}
+                                                      </div>
+                                                    </div>
+                                                    <div class="row">
+                                                      <div class="col-sm-3 text-left font-weight-bold">
+                                                        Email:
+                                                      </div>
+                                                      <div class="col-sm-7 ">
+                                                        {{item.email}}
+                                                      </div>
+                                                    </div>
+                                                    
+                                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="backside">
+                                                <div class="card">
+                                                  <div class="card-body text-center mt-4">
+                                                    <h4 class="card-title">{{item.firstName}} {{item.lastName}}</h4>
+                                                    <div class="row">
+                                                      <div class="col-sm-7 text-left font-weight-bold">
+                                                        Achievements:
+                                                      </div>
+                                                    </div>
+                                                    <div class=" row ">
+                                                      <div class="col-sm-12 text-left">
+                                                        {{item.achievements}}
+                                                      </div>
 
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                      <div class="col-sm-7 text-left font-weight-bold">
+                                                        Experience:
+                                                      </div>
+                                                    </div>
+
+                                                    <div class=" row">
+                                                      <div class="col-sm-12 text-left ">
+                                                        {{item.description}}
+                                                      </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                      <div class="col-sm-7 text-left font-weight-bold">
+                                                        Address:
+                                                      </div>
+                                                    </div>
+
+                                                    <div class=" row">
+                                                      <div class="col-sm-12 text-left ">
+                                                        {{item.address}}
+                                                      </div>
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
+                                        <!-- ./Team member -->
                                         
-                                        <div class="row">
-                                        <div class="col-sm-7 text-left font-weight-bold">
-Experience:
-                                        </div>
-                                    </div>
 
-                                        <div class=" row">
-                                                    <div class="col-sm-12 text-left ">
-{{item.description}}
-                                        </div>
-
-                                        </div>
-                                                     <div class="row">
-                                        <div class="col-sm-7 text-left font-weight-bold">
-Address:
-                                        </div>
-                                    </div>
-
-                                        <div class=" row">
-                                                    <div class="col-sm-12 text-left ">
-{{item.address}}
-                                        </div>
-
-                                        </div>
                                       </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-          
-
-        </div>
-   
-</section>
-                      		
+                                      
+                                    </section>
+                                    
 
 
 
                         <!-- </div>
-                                			</div> -->
-                                		</div>
-                                		
+                      </div> -->
                     </div>
+                    
+                  </div>
                 </div>
-            </div>      
-    </div> <!-- ./container -->
-   
+              </div>      
+            </div> <!-- ./container -->
+            
 
-<!------ Include the above in your HEAD tag ---------->
+            <!------ Include the above in your HEAD tag ---------->
 

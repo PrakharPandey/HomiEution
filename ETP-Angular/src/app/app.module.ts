@@ -14,25 +14,25 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RegisterAsTeacherComponent,
-    RegisterAsStudentComponent,
-    RegisterAsParentComponent,
-    SearchTeacherComponent,
-    ViewTeacherComponent,
-    RateTeacherComponent,
-    ContactUsComponent,
-    MainComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  
-  bootstrap: [AppComponent]
+declarations: [
+AppComponent,
+RegisterAsTeacherComponent,
+RegisterAsStudentComponent,
+RegisterAsParentComponent,
+SearchTeacherComponent,
+ViewTeacherComponent,
+RateTeacherComponent,
+ContactUsComponent,
+MainComponent
+],
+imports: [
+BrowserModule,
+AppRoutingModule,
+HttpClientModule,
+FormsModule
+],
+providers: [],
+
+bootstrap: [AppComponent]
 })
 export class AppModule { }

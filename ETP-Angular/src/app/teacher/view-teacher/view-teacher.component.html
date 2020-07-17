@@ -4,45 +4,45 @@
       <h3><a class="list" href="/main">HOMIEUTION</a></h3>
     </div>
     <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
-       <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
- <ul class="navbar-right">
-      </ul>
-      <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
       <a class="list" href="/contactus">Contact Us</a>
-      </ul>
-       <ul class="navbar-right">
+    </ul>
+    <ul class="navbar-right">
       <a class="list" href="#">Team</a>
     </ul> 
   </div>
@@ -53,88 +53,88 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <form>
-<div class="container-fluid register">
-                <div class="row">
-                    <div class="col-md-9 register-right">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">View Teacher Profile</h3>
-                                <div class="row register-form">
-                                	<div class="col-md-2">
-                                	</div>
-                                	<div class="col-md-5">
-                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value="" name="firstName"
-                                     [(ngModel)]="data.firstName" />
-                                		</div>
-                                		<div class="col-md-5">
-                                			<input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
-                                			</div>
-                                		</div>
-                                		</div>
-                                	</div>
-                                  <div *ngIf="show">
-                                  <div class="row">
-                                    <div class="col-md-1">
-                                  </div>
-                                    <div class="col-md-3">
-                                      <div class="row px-5 mx-2">
-                                    <p><img class="img-thumbnail" src="assets/teacherProfiles/{{data.uploadPhoto}}" onerror="this.src='assets/dummy.png'" width="100" height="100"></p>
-                                  </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="data.firstName" value="" name="firstName"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Average Rating"  [(ngModel)]="data.avgRating" value="" name="avgRating"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-control" placeholder="Area Code"  [(ngModel)]="data.postalCode" value="" name="postalCode"/>
-                                        </div>
-                                          <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Locality"  [(ngModel)]="data.address" value="" name="address"/>
-                                        </div>
-                                          <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Teacher Code"  [(ngModel)]="data.teacherCode" value="" name="teacherCode"/>
-                                        </div>
-                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Teacher Experience"  [(ngModel)]="data.experience"  value="" name="experience"/>
-                                        </div>
-                                      
-                            </div>
-                              <div class="col-md-3">
-                                    </div>
-                                  </div>
+  <div class="container-fluid register">
+    <div class="row">
+      <div class="col-md-9 register-right">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">View Teacher Profile</h3>
+            <div class="row register-form">
+             <div class="col-md-2">
+             </div>
+             <div class="col-md-5">
+              <input type="text" class="form-control subject" placeholder="Teacher Name" value="" name="firstName"
+              [(ngModel)]="data.firstName" />
+            </div>
+            <div class="col-md-5">
+             <input type="submit" class="btnRegister btn-lg" (click)="search(data)" value="Search"/>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div *ngIf="show">
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
+          <div class="row px-5 mx-2">
+            <p><img class="img-thumbnail" src="assets/teacherProfiles/{{data.uploadPhoto}}" onerror="this.src='assets/dummy.png'" width="100" height="100"></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="data.firstName" value="" name="firstName"/>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Average Rating"  [(ngModel)]="data.avgRating" value="" name="avgRating"/>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Area Code"  [(ngModel)]="data.postalCode" value="" name="postalCode"/>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Locality"  [(ngModel)]="data.address" value="" name="address"/>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Teacher Code"  [(ngModel)]="data.teacherCode" value="" name="teacherCode"/>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Teacher Experience"  [(ngModel)]="data.experience"  value="" name="experience"/>
+          </div>
+          
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-1">
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
+          <label>Student Feedback</label>
+          <div class="form-group">
+            <textarea   rows="5" class="form-control"  placeholder="Provide feedback" value=""></textarea>
           </div>
-                          <div class="col-md-3">
-                            <label>Student Feedback</label>
-                            <div class="form-group">
-                                            <textarea   rows="5" class="form-control"  placeholder="Provide feedback" value=""></textarea>
-                                        </div>
-                        </div>
-                        <div class="col-md-1">
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
+          <label>Parent Feedback</label>
+          <div class="form-group">
+            <textarea  rows="5" class="form-control"  placeholder="Provide feedback" value=""></textarea>
           </div>
-                        <div class="col-md-3">
-                            <label>Parent Feedback</label>
-                            <div class="form-group">
-                                            <textarea  rows="5" class="form-control"  placeholder="Provide feedback" value=""></textarea>
-                                        </div>
-                        </div> 
-                        <div class="col-md-1">
+        </div> 
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
+          <label>HomiEution Analysis</label>
+          <div class="form-group">
+            <textarea rows="5" class="form-control"  placeholder="Provide feedback" value=""></textarea>
           </div>
-                        <div class="col-md-3">
-                            <label>HomiEution Analysis</label>
-                            <div class="form-group">
-                                            <textarea rows="5" class="form-control"  placeholder="Provide feedback" value=""></textarea>
-                                        </div>
-                        </div> 
-                       
-                        </div>  
-                        </div>                     
-                        </div>
-                        </div>
-                      </div>
+        </div> 
+        
+      </div>  
+    </div>                     
+  </div>
+</div>
+</div>
 </form>

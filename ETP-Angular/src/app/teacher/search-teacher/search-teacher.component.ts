@@ -12,16 +12,16 @@ import {Router} from '@angular/router';
 export class SearchTeacherComponent implements OnInit {
 
   constructor(private teacherservice: TeacherService , private router:Router) {} 
-    public data = {
+  public data = {
   	subject: null
-    };
+  };
 
-    showData: any
+  showData: any
 
   ngOnInit(): void {
   }
 
-search(request: any){
+  search(request: any){
     this.teacherservice.searchTeacher(request).subscribe(response => {
       if(response){
         this.showData = response;
@@ -30,7 +30,7 @@ search(request: any){
   }
 
   onClick(url){
-  this.router.navigate([url]);
-}
+    this.router.navigate([url]);
+  }
 
 }

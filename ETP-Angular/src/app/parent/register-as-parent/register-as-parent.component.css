@@ -7,12 +7,12 @@
     padding: 0;
 }
 .navbar{
-   background: -webkit-linear-gradient(left, #6d7782, #135680);
-    
+ background: -webkit-linear-gradient(left, #6d7782, #135680);
+ 
 }
 .navbar-brand{
     color:  white;
-    }
+}
 .register{
     background: -webkit-linear-gradient(left, #6d7782, #135680);
     padding: 3%;  
