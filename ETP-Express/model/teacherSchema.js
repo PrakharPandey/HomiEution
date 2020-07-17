@@ -3,21 +3,21 @@ let Schema = mongoose.Schema
 
 
 let teacher = new Schema({
-firstName: String,
-lastName: String,
-email: String,
-phoneNumber: Number,
-address: String,
-postalCode: Number,
-subjects: Array,
-age: Number,
-experience: String,
-rating: Number,
-achievements: String,
-description: String,
-preferredLanguage: String,
-feedBack: String,
-uploadPhoto: String,
+	firstName: String,
+	lastName: String,
+	email: String,
+	phoneNumber: Number,
+	address: String,
+	postalCode: Number,
+	subjects: Array,
+	age: Number,
+	experience: String,
+	rating: Number,
+	achievements: String,
+	description: String,
+	preferredLanguage: String,
+	feedBack: String,
+	uploadPhoto: String,
 })
 
 module.exports = mongoose.model('teacher', teacher)
