@@ -14,11 +14,7 @@ router.use(bodyParser.urlencoded({
 	extended: true
 }))
 
-
-
-
-
-//Insert New Teacher
+//Insert New Parent
 router.post('/addParent', (req, res) => {
 	let parentObj = new parent()
   parentObj.firstName = req.body.firstName;
@@ -35,17 +31,15 @@ router.post('/addParent', (req, res) => {
   parentObj.isRegistered=req.body.isRegistered;
   parentObj.profession=req.body.profession;
   parentObj.studentUniqueID=req.body.studentUniqueID;
-	parentObj.save((err, we) => {
-		if(err){
-			console.log(err);
-			res.send('error saving Record')
-		}	
-		else
-		{
-			res.json(parentObj)
-		}
-	})
+  parentObj.save((err, we) => {
+    if(err){
+     res.send('error saving Record')
+   }	
+   else
+   {
+     res.json(parentObj)
+   }
+ })
 })
-
 
 module.exports = router

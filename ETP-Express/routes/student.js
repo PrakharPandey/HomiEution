@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
   destination: '../ETP-Angular/src/assets/studentProfiles',
   filename: (req, file, cb) => {
     console.log(file);
-cb(null, file.fieldname+'_'+Date.now()+path.extname(file.originalname));
+    cb(null, file.fieldname+'_'+Date.now()+path.extname(file.originalname));
   }
 });
 
@@ -47,15 +47,15 @@ router.post('/addStudent', upload, (req, res) => {
   if(req.file)
     studentObj.uploadPhoto = req.file.filename == 'null' ? null : req.file.filename;
 
-	studentObj.save((err, we) => {
-		if(err) {
+  studentObj.save((err, we) => {
+    if(err) {
       console.log(err)
     }
-		else
-		{
-			res.json(studentObj)
-		}
-	})
+    else
+    {
+     res.json(studentObj)
+   }
+ })
 })
 
 module.exports = router

@@ -19,7 +19,7 @@ router.use(bodyParser.urlencoded({
 const storage = multer.diskStorage({
   destination: '../ETP-Angular/src/assets/teacherProfiles',
   filename: (req, file, cb) => {
-cb(null, file.fieldname+'_'+Date.now()+path.extname(file.originalname));
+    cb(null, file.fieldname+'_'+Date.now()+path.extname(file.originalname));
   }
 });
 
@@ -40,6 +40,7 @@ router.post('/searchTeacher', (req, res) => {
   });
 })
 
+//View Teacher Profile
 router.post('/viewTeacher', (req, res) => {
   teacher.findOne({firstName: req.body.firstName}, (err, we) => {
     if(err)
@@ -54,7 +55,7 @@ router.post('/viewTeacher', (req, res) => {
 //Insert New Teacher
 router.post('/addTeacher', upload, (req, res) => {
   console.log(req.file)
-	let teacherObj = new teacher()
+  let teacherObj = new teacher()
   teacherObj.firstName = req.body.firstName == 'null' ? null : req.body.firstName;
   teacherObj.lastName = req.body.lastName == 'null' ? null : req.body.lastName;
   teacherObj.email = req.body.email == 'null' ? null : req.body.email;
@@ -71,78 +72,50 @@ router.post('/addTeacher', upload, (req, res) => {
   if(req.file)
     teacherObj.uploadPhoto = req.file.filename == 'null' ? null : req.file.filename;
 
-	teacherObj.save((err, we) => {
-		if(err)
-			res.send('Error saving teacher')
-		else
-		{
-			res.json(teacherObj)
-		}
-	})
+  teacherObj.save((err, we) => {
+    if(err)
+     res.send('Error saving teacher')
+   else
+   {
+     res.json(teacherObj)
+   }
+ })
 })
 
-//Find Employee By Id and Update
+//Rate a Teacher
 router.post('/rateTeacher', (req, res) => {
   teacher.update({
   	firstName: req.body.firstName
   }, { $set: 
   	{
-    rating: req.body.rating,
-    feedBack: req.body.feedBack
+      rating: req.body.rating,
+      feedBack: req.body.feedBack
     }}, 
-  	{upsert: true},
-  	(err, empp) => {
-  		if(err)
-  			throw err
-  		else
-  		{
-  			res.json(empp)
-  		}
-  })
+    {upsert: true},
+    (err, empp) => {
+      if(err)
+       throw err
+     else
+     {
+       res.json(empp)
+     }
+   })
 })
 
 
-//Delete Employee By Id
+//Delete Teacher
 router.delete('/delete/:date', (req, res) => {
   teacher.remove({
   	date: req.params.date
   }, (err, empp) => {
-  		if(err)
-        throw err
+    if(err)
+      throw err
   			//
-  		else
-  		{
-  			res.json(empp)
-  		}
-  })
+        else
+        {
+         res.json(empp)
+       }
+     })
 })
-
-/*// middleware that is specific to this router
-router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
-})*/
-
-/*app.all('/secret', function (req, res, next) {
-   console.log('the response will be sent by the next function ...')
-  next()
-}, function (req, res) {
-  res.send('Hello from B!')
-})*/
-
-/*app.get('/users/:userId/books/:bookId', function (req, res) {
-  res.send(req.params)
-})*/
-
-/*app.route('/book')
-  .get(function (req, res) {
-    res.send('Get a random book')
-  })
-  .post(function (req, res) {
-    res.send('Add a book')
-  })
-  .put(function (req, res) {
-    res.send('Update the book')
-  })*/
 
 module.exports = router
