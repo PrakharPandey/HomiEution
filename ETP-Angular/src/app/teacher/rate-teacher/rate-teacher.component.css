@@ -77,8 +77,9 @@
 }
 .btnRegister{
     border: none;
-    margin-top: 1%;
     border-radius: 1.5rem;
+    padding: 2%;
+    float:center;
     background: #0062cc;
     color: #fff;
     font-weight: 600;
