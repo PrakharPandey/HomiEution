@@ -72,8 +72,10 @@
     margin-top: -9%;
 }
 .register .register-form{
-    padding: 10%;
     margin-top: 10%;
+    padding-top: 10%;
+    padding-left: 11%;
+    padding-bottom: 10%;
 }
 .btnRegister{
     border: none;

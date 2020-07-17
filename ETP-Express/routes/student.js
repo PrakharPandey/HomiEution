@@ -44,7 +44,8 @@ router.post('/addStudent', upload, (req, res) => {
   studentObj.introduction = req.body.introduction == 'null' ? null : req.body.introduction;
   studentObj.parentUniqueID = req.body.parentUniqueID == 'null' ? null : req.body.parentUniqueID;
   studentObj.parentPhoneNumber = req.body.parentPhoneNumber == 'null' ? null : req.body.parentPhoneNumber;
-  studentObj.uploadPhoto = req.file.filename == 'null' ? null : req.file.filename;
+  if(req.file)
+    studentObj.uploadPhoto = req.file.filename == 'null' ? null : req.file.filename;
 
 	studentObj.save((err, we) => {
 		if(err) {

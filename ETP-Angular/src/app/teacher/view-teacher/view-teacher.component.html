@@ -47,6 +47,12 @@
     </ul> 
   </div>
 </nav>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<form>
 <div class="container-fluid register">
                 <div class="row">
                     <div class="col-md-9 register-right">
@@ -57,7 +63,7 @@
                                 	<div class="col-md-2">
                                 	</div>
                                 	<div class="col-md-5">
-                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value=""  
+                                		<input type="text" class="form-control subject" placeholder="Teacher Name" value="" name="firstName"
                                      [(ngModel)]="data.firstName" />
                                 		</div>
                                 		<div class="col-md-5">
@@ -66,7 +72,10 @@
                                 		</div>
                                 		</div>
                                 	</div>
+                                  <div *ngIf="show">
                                   <div class="row">
+                                    <div class="col-md-1">
+                                  </div>
                                     <div class="col-md-3">
                                       <div class="row px-5 mx-2">
                                     <p><img class="img-thumbnail" src="assets/teacherProfiles/{{data.uploadPhoto}}" onerror="this.src='assets/dummy.png'" width="100" height="100"></p>
@@ -74,22 +83,22 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="data.firstName" value="" />
+                                            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="data.firstName" value="" name="firstName"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Average Rating"  [(ngModel)]="data.avgRating" value="" />
+                                            <input type="text" class="form-control" placeholder="Average Rating"  [(ngModel)]="data.avgRating" value="" name="avgRating"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Area Code"  [(ngModel)]="data.postalCode" value="" />
+                                            <input type="number" class="form-control" placeholder="Area Code"  [(ngModel)]="data.postalCode" value="" name="postalCode"/>
                                         </div>
                                           <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Locality"  [(ngModel)]="data.address" value="" />
+                                            <input type="text" class="form-control" placeholder="Locality"  [(ngModel)]="data.address" value="" name="address"/>
                                         </div>
                                           <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Teacher Code"  [(ngModel)]="data.teacherCode" value="" />
+                                            <input type="text" class="form-control" placeholder="Teacher Code"  [(ngModel)]="data.teacherCode" value="" name="teacherCode"/>
                                         </div>
                                          <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Teacher Experience"  [(ngModel)]="data.experience"  value="" />
+                                            <input type="text" class="form-control" placeholder="Teacher Experience"  [(ngModel)]="data.experience"  value="" name="experience"/>
                                         </div>
                                       
                             </div>
@@ -123,7 +132,9 @@
                                         </div>
                         </div> 
                        
-                        </div>                       
+                        </div>  
+                        </div>                     
                         </div>
                         </div>
                       </div>
+</form>

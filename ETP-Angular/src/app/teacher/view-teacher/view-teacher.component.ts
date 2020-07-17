@@ -21,7 +21,7 @@ export class ViewTeacherComponent implements OnInit {
     uploadPhoto: null,
     };
 
-    showData: any
+    show: boolean = false;
 
   ngOnInit(): void {
   }
@@ -30,6 +30,7 @@ search(request: any){
     this.teacherservice.viewTeacherProfile(request).subscribe(response => {
       if(response){
         this.data = response;
+        this.show = true;
       }
     })
   }
