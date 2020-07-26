@@ -1,0 +1,43 @@
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Rate Teacher</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">You can find details of a teacher and rate him/her.</p>
+    </div>
+    <div class="flex lg:w-1/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0">
+      <input class="flex-grow w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mr-4 mb-4 sm:mb-0 ml-8" placeholder="First Name" type="text" [(ngModel)]="data.firstName" (input)="nameEntered()">
+      <button class="text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg" (click)="search(data)">Search</button>
+    </div>
+  </div>
+  <div class="container px-5 mx-auto flex flex-col" *ngIf="show">
+    <div class="lg:w-4/6 mx-auto">
+      <div class="flex flex-col sm:flex-row mt-10">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div class="rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+            <img alt="content" class="object-contain h-25 w-20" src="assets/teacherProfiles/{{data.uploadPhoto}}" onerror="this.src='assets/dummy.png'">
+          </div>
+          <div class="flex flex-col items-center text-center justify-center">
+            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">{{data.firstName}} {{data.lastName}}</h2>
+            <div class="w-12 h-1 bg-orange-500 rounded mt-2 mb-4"></div>
+            <p class="text-base text-gray-600">{{data.description}}</p>
+          </div>
+        </div>
+        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Average Rating  :</span> {{data.avgRating}}</p>
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Locality        :</span> {{data.address}}</p>
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Area Code       :</span> {{data.postalCode}}</p>
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Teacher Code    :</span> {{data.teacherCode}}</p>
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Experience      :</span> {{data.experience}}</p>
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Achievements    :</span> {{data.achievements}}</p>
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Rating    :</span> </p>
+          <input class="flex-grow w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mr-4 mb-4 sm:mb-0" placeholder="" type="text" [(ngModel)]="data.rating">
+          <p class="leading-relaxed text-lg mb-4"><span class="font-semibold">Feedback        :</span> </p>
+          <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" placeholder="" [(ngModel)]="data.feedBack"></textarea>
+          <div class="py-4">
+          <button class="text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg" (click)="submit(data)">Submit</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
