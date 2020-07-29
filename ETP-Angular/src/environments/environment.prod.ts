@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  serviceURL: 'http://15.207.86.202:3000/'
+  serviceURL: 'http://homieution-node.azurewebsites.net/'
 };
 
 export const teacher_ENV = {

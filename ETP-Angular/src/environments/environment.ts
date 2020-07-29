@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serviceURL: 'http://15.207.86.202:3000/'
+  serviceURL: 'https://homieution-node.azurewebsites.net/'
 };
 
 /*
