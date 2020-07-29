@@ -8,6 +8,7 @@ let student = require('./routes/student');
 let parent = require('./routes/parent');
 
 let app = express();
+let port = process.env.port || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,7 +18,7 @@ app.use("/teacher",teacher);
 app.use("/student",student);
 app.use("/parent",parent);
 
-app.listen(3000);
+app.listen(port);
 console.log('running')
 
 module.exports = app;
